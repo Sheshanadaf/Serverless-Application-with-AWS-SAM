@@ -19,7 +19,7 @@ This project is a **serverless application** built using **AWS SAM (Serverless A
 lambda-SAM-APP/
 │
 ├── hello-world/          # Contains the Lambda function code
-│   └── app.js            # Main Lambda handler
+│   └── app.mjs            # Main Lambda handler
 │
 └── template.yaml         # SAM template defining S3, Lambda, and DynamoDB resources
 ```
@@ -79,11 +79,11 @@ npm install aws-sdk
 
 ```
 
-This command processes your `template.yaml`, prepares the Lambda code, and generates the `.aws-sam/` build folder.
+This command install your aws-sdk module in app.mjs file.
 
 ---
 
-## 🔨 4. Build the Application
+## 🔨 5. Build the Application
 
 ```
 sam build
@@ -93,7 +93,7 @@ This command processes your `template.yaml`, prepares the Lambda code, and gener
 
 ---
 
-## 🚀 5. Deploy the Application
+## 🚀 6. Deploy the Application
 
 ```
 sam deploy --guided
@@ -127,8 +127,7 @@ The workflow you mentioned is **correct and recommended**:
 
 ## 📝 Additional Notes
 
-* Do **NOT** commit `.aws-sam/` or `node_modules/` to GitHub.
-* `template.yaml` contains your S3 → Lambda → DynamoDB infrastructure.
+
 * Test Lambda locally:
 
   ```
